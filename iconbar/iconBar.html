@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: rgb(247, 242, 196);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #f86a6a; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Accordion</h2>
+
+<button class="accordion">ปรัชญาโรงเรียน</button>
+<div class="panel">
+  <p>“ปัญญายัตถัง วิปัสสะติ”(คนย่อมเห็นเนื้อความด้วยปัญญา) หมายถึง ปัญญาเกิดขึ้นด้วยเหตุ 3 ประการ
+    สุตมยปัญญา : ปัญญาสำเร็จได้ด้วยการฟัง
+    จินตมยปัญญา : ปัญญาสำเร็จได้ด้วยการนึกคิด
+    ภาวนามยปัญญา : ปัญญาสำเร็จได้ด้วยการฝึก
+    </p>
+</div>
+
+<button class="accordion">คติพจน์</button>
+<div class="panel">
+  <p>คุณธรรมนำวิชาการ</p>
+</div>
+
+<button class="accordion">คำขวัญโรงเรียน</button>
+<div class="panel">
+  <p>รักษ์ศักดิ์ศรี มีคุณธรรม นำวิชาการ สืบสานงานพระราชดำริ</p>
+</div>
+
+<button class="accordion">สีประจำโรงเรียน</button>
+<div class="panel">
+  <p>น้ำเงิน - แสด
+    สีน้ำเงิน หมายถึง สถาบันพระมหากษัตริย์
+    สีแสด หมายถึง สีประจำวันประสูติของสมเด็จพระเจ้าน้องนางเธอ เจ้าฟ้าจุฬาภรณวลัยลักษณ์ อัครราชกุมารีกรมพระศรีสวางควัฒน วรขัตติยราชนารี คือ วันพฤหัสบดี</p>
+</div>
+<button class="accordion">วิสัยทัศน์</button>
+<div class="panel">
+  <p>ภายในปี พ.ศ.2567 โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย พิษณุโลก เป็นโรงเรียนที่พัฒนานักเรียนให้มีจิตใจ บุคลิกลักษณะอันพึงประสงค์ และมีคุณภาพการศึกษาอยู่ในระดับเดียวกับโรงเรียนวิทยาศาสตร์ชั้นนำของนานาชาติ</p>
+</div>
+    
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
